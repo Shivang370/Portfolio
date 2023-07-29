@@ -9,6 +9,7 @@ export default function SoftwareSkill() {
         <ul className="dev-icons">
           {skillsSection.softwareSkills.map((skills, i) => {
             return (
+              
               <li
                 key={i}
                 className="software-skill-inline"
@@ -17,8 +18,11 @@ export default function SoftwareSkill() {
                 <i className={skills.fontAwesomeClassname}></i>
                 <p>{skills.skillName}</p>
               </li>
+              
+              
             );
           })}
+          
         </ul>
       </div>
     </div>
