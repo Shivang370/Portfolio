@@ -77,18 +77,18 @@ https://fontawesome.com/icons?d=gallery */
       skillName: "Linux",
       fontAwesomeClassname: "fab fa-linux"
     },
-    // {
-    //   skillName: "JWT",
-    //   fontAwesomeClassname: "fa-solid fa-unlock-keyhole"
-    // },
-    // {
-    //   skillName: "MicroService",
-    //   fontAwesomeClassname: "fab fa-globe"
-    // },
-    // {
-    //   skillName: "Rest-API",
-    //   fontAwesomeClassname: "fab fa-key"
-    // },
+    {
+      skillName: "JWT",
+      fontAwesomeClassname  :"fab fa-keycdn"
+    },
+    {
+      skillName: "MicroService",
+      fontAwesomeClassname: "fas fa-globe"
+    },
+    {
+      skillName: "Rest-API",
+      fontAwesomeClassname: "fas fa-key"
+    },
     {
       skillName: "AWS",
       fontAwesomeClassname: "fab fa-aws"
