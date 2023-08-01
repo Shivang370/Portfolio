@@ -49,11 +49,11 @@ const skillsSection = {
   subTitle: "SOFTWARE DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+      "⚡ Develop highly secure/robust & fast client-server applications"
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
+    emoji("⚡ Use Proficient tools like Postman/ Intellij/ MySQL WorkBench"),
     emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+      "⚡ Integration of third party services such as NSDL/ AWS / API Gateway"
     )
   ],
 
@@ -174,7 +174,9 @@ const workExperiences = {
       descBullets: [
         "Provided Message Level Encryption for request & response for secure data transfer",
         "Implemented JWT Authorization for enhancing security",
-        "Developed Fast, Secure, Reliable API's for Client-Server Communications"
+        "Developed Fast, Secure, Reliable API's for Client-Server Communications",
+        "Implemented API Documentation using Swagger",
+        "Worked with team on the implementation of Grpc for logging DFX API Gateway."
       ]
     },
     // {
@@ -337,8 +339,8 @@ const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+  number: "+91-98XXXXXX25",
+  email_address: "shivangtripathi370@gmail.com"
 };
 
 // Twitter Section
