@@ -51,7 +51,7 @@ const skillsSection = {
     emoji(
       "⚡ Develop highly secure/robust & fast client-server applications"
     ),
-    emoji("⚡ Use Proficient tools like Postman/ Intellij/ MySQL WorkBench"),
+    emoji("⚡ Use Proficient tools like Postman/ Intellij/ MySQL WorkBench/ BitBucket/ GitHub/ JIRA"),
     emoji(
       "⚡ Integration of third party services such as NSDL/ AWS / API Gateway"
     )
