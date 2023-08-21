@@ -26,7 +26,7 @@ const greeting = {
     "A passionate Software Developer 🚀 having an experience of building Client and Server side applications with Java / SpringBoot / Kafka / Redis and some other cool libraries and frameworks."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1PYinkgkyQ8HBAtizhMDGe5XM7rfTF9I_/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1iJHJ_gjnEfld_OJgqZl2KG3u75zilaWy/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 // Social Media Links
@@ -200,7 +200,7 @@ const workExperiences = {
 To know how to get github key look at readme.md */
 
 const openSource = {
-  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
+  showGithubProfile: true, // Set true or false to show Contact profile using Github, defaults to true
   display: true // Set false to hide this section, defaults to true
 };
 
@@ -274,6 +274,16 @@ const achievementSection = {
       footerLink: [
         {name: "Certification", url: "http://ude.my/UC-debc607f-fe34-4622-b666-3911d62f15ce"}
       ]
+    },
+
+    {
+      title: "AWS Cloud Practitioner",
+      subtitle: "Completed Certifcation from AWS for Cloud Practitioner",
+      image: require("./assets/images/AWS.png"),
+      imageAlt: "AWS Logo",
+      footerLink: [
+        {name: "Certification", url: "https://www.credly.com/badges/6e037d2b-a85d-46d9-a50f-01a9705d2472/public_url"}
+      ]
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -339,7 +349,7 @@ const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+91-98XXXXXX25",
+  number: "+91-9821548025",
   email_address: "shivangtripathi370@gmail.com"
 };
 

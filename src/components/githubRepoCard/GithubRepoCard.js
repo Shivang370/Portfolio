@@ -9,17 +9,24 @@ export default function GithubRepoCard({repo, isDark}) {
       console.log(`URL in ${name} is undefined`);
       return;
     }
-    var win = window.open(url, "_blank");
+    var win = window.open(convertToRegularURL(url), "_blank");
     win.focus();
   }
 
+  function convertToRegularURL(apiUrl) {
+    const regularUrl = apiUrl.replace('https://api.github.com/repos/', 'https://github.com/');
+    return regularUrl;
+  }
+  
   return (
     <Fade bottom duration={1000} distance="20px">
       <div>
         <div
           className={isDark ? "dark-card-mode repo-card-div" : "repo-card-div"}
           key={repo.node.id}
-          onClick={() => openUrlInNewTab(repo.node.url, repo.node.name)}
+          onClick={() => 
+            openUrlInNewTab(repo.node.url, repo.node.name)
+          }
         >
           <div className="repo-name-div">
             <svg
@@ -40,13 +47,13 @@ export default function GithubRepoCard({repo, isDark}) {
           <p className="repo-description">{repo.node.description}</p>
           <div className="repo-stats">
             <div className="repo-left-stat">
-              {repo.node.primaryLanguage !== null && (
+              {repo.node.language !== null && (
                 <span>
                   <div
                     className="language-color"
-                    style={{backgroundColor: repo.node.primaryLanguage.color}}
+                    style={{backgroundColor: "yellowgreen"}}
                   ></div>
-                  <p>{repo.node.primaryLanguage.name}</p>
+                  <p>{repo.node.language}</p>
                 </span>
               )}
               <span>

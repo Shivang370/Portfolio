@@ -13,31 +13,52 @@ export default function Projects() {
   const [repo, setrepo] = useState([]);
   // todo: remove useContex because is not supported
   const {isDark} = useContext(StyleContext);
+  const [repoNames,setArray] = useState(['StudentFeedbackSystem','ElectionPrediction','Spring-JWT','Email-Sender']);
 
   useEffect(() => {
-    const getRepoData = () => {
-      fetch("/profile.json")
-        .then(result => {
-          if (result.ok) {
-            return result.json();
-          }
-          throw result;
-        })
-        .then(response => {
-          setrepoFunction(response.data.user.pinnedItems.edges);
-        })
-        .catch(function (error) {
-          console.error(
-            `${error} (because of this error, nothing is shown in place of Projects section. Also check if Projects section has been configured)`
-          );
-          setrepoFunction("Error");
-        });
+    const getRepoData = async() => {
+      let data = await fetch("https://api.github.com/users/Shivang370/repos");
+      let array = await data.json();
+      
+      setrepoFunction(array)
     };
     getRepoData();
   }, []);
 
   function setrepoFunction(array) {
-    setrepo(array);
+    
+    let repos = array.map((rep,idx)=>{
+      return convertRepoToGraphQL(rep);
+    })
+    console.log(repos);
+    repos = repos.filter((item)=>{
+      return repoNames.includes(item.node.name);
+    });
+    console.log(repos);
+    setrepo(repos)
+    
+  }
+  function convertRepoToGraphQL(repo) {
+    const repoNode = {
+      node: {
+        name: repo.name,
+        description: repo.description || null,
+        language: repo.language || null,
+        forkCount: repo.forkCount || 0,
+        stargazers: {
+            totalCount: repo.stargazers ? repo.stargazers.totalCount : 0
+        },
+        url: repo.url || null,
+        id: repo.id,
+        diskUsage: repo.diskUsage || 0,
+        primaryLanguage: {
+            name: repo.primaryLanguage ? repo.primaryLanguage.name : null,
+            color: repo.primaryLanguage ? repo.primaryLanguage.color : null
+        }
+    }
+    };
+
+    return repoNode;
   }
   if (
     !(typeof repo === "string" || repo instanceof String) &&
@@ -48,7 +69,7 @@ export default function Projects() {
         <div className="main" id="opensource">
           <h1 className="project-title">Open Source Projects</h1>
           <div className="repo-cards-div-main">
-            {repo.map((v, i) => {
+            {repo && repo.map((v, i) => {
               if (!v) {
                 console.error(
                   `Github Object for repository number : ${i} is undefined`
