@@ -26,7 +26,7 @@ const greeting = {
     "A passionate Software Developer 🚀 having an experience of building Client and Server side applications with Java / SpringBoot / Kafka / Redis and some other cool libraries and frameworks."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1iJHJ_gjnEfld_OJgqZl2KG3u75zilaWy/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1OIomxru5-k2acKCvZQuSBCXLUvRCPegv/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 // Social Media Links
@@ -277,7 +277,7 @@ const achievementSection = {
     },
 
     {
-      title: "AWS Cloud Practitioner",
+      title: "AWS Certified Cloud Practitioner",
       subtitle: "Completed Certifcation from AWS for Cloud Practitioner",
       image: require("./assets/images/AWS.png"),
       imageAlt: "AWS Logo",
