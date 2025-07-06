@@ -26,7 +26,7 @@ const greeting = {
     "A passionate Software Developer 🚀 having an experience of building Client and Server side applications with Java / SpringBoot / Kafka / Redis and some other cool libraries and frameworks."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1OIomxru5-k2acKCvZQuSBCXLUvRCPegv/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1KaWxV2RU3jcd7Epbv1yEcpvCPJA2ED0N/view?usp=drive_link", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 // Social Media Links
@@ -54,6 +54,8 @@ const skillsSection = {
     emoji("⚡ Use Proficient tools like Postman/ Intellij/ MySQL WorkBench/ BitBucket/ GitHub/ JIRA"),
     emoji(
       "⚡ Integration of third party services such as NSDL/ AWS / API Gateway"
+    ),emoji(
+      "⚡ Using AWS & Microservices to build scalable applications"
     )
   ],
 
@@ -108,7 +110,16 @@ https://fontawesome.com/icons?d=gallery */
     {
       skillName: "Java",
       fontAwesomeClassname: "fab fa-java"
+    },
+    {
+      skillName: "DynamoDb",
+      fontAwesomeClassname: "fas fa-database"
+    },
+    {
+      skillName: "Unleash",
+      fontAwesomeClassname: "fa fa-toggle-on"
     }
+    
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -150,11 +161,11 @@ const techStack = {
     },
     {
       Stack: "Backend",
-      progressPercentage: "70%"
+      progressPercentage: "80%"
     },
     {
       Stack: "Programming",
-      progressPercentage: "60%"
+      progressPercentage: "70%"
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -179,20 +190,30 @@ const workExperiences = {
         "Worked with team on the implementation of Grpc for logging DFX API Gateway."
       ]
     },
-    // {
-    //   role: "Front-End Developer",
-    //   company: "Quora",
-    //   companylogo: require("./assets/images/quoraLogo.png"),
-    //   date: "May 2017 – May 2018",
-    //   desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    // },
-    // {
-    //   role: "Software Engineer Intern",
-    //   company: "Airbnb",
-    //   companylogo: require("./assets/images/airbnbLogo.png"),
-    //   date: "Jan 2015 – Sep 2015",
-    //   desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    // }
+    {
+      role: "SDE-2",
+      company: "HashedIn",
+      companylogo: require("./assets/images/HashedIn_Logo.jpeg"),
+      date: "Apr 2024 - Feb 2025",
+      desc: "Java |Spring Boot |OOP |Kafka | WebFlux |MicroServices |Git |Camel |Junits |Design-Patterns |",
+      descBullets: [
+        "Used Gen AI for Tibco to Spring Boot along with OSP to Spring Boot conversion with prompt tuning.",
+        "Implemented Event driven architecture using Kafka/Camel & WebClient for Asynchronous communication between microservices",
+        "Optimized SQL queries and applied indexing mechanisms, improving query response time",
+        "Created unit tests to validate functionality of codebase, ensuring 90% test coverage"
+      ]
+    },
+    {
+      role: "Software Engineer",
+      company: "Publicis Sapient",
+      companylogo: require("./assets/images/Sapients_Logo.jpg"),
+      date: "Feb 2025 – Present",
+      desc: "Java |Spring Reactive |Rest API |DynamoDb |AWS |MicroService |Unleash |JWT |",
+      descBullets: [
+        "Developed a high-performance, reusable wrapper library in Java using Unleash SDK for feature flag management across microservices, reducing feature rollout latency by 40% and enabling near-instantaneous feature toggling,significantly improving deployment agility and operational efficiency.",
+        "Built scalable microservices and REST APIs leveraging Spring Reactive, AWS DynamoDB, API Gateway for rate limiting, and AWS SNS, achieving a 30% increase in system throughput, ensuring high availability with 99.99% uptime, and delivering seamless, low-latency, cloud integrations for critical applications."
+      ]
+    }
   ]
 };
 
@@ -275,7 +296,6 @@ const achievementSection = {
         {name: "Certification", url: "http://ude.my/UC-debc607f-fe34-4622-b666-3911d62f15ce"}
       ]
     },
-
     {
       title: "AWS Certified Cloud Practitioner",
       subtitle: "Completed Certifcation from AWS for Cloud Practitioner",
@@ -283,6 +303,15 @@ const achievementSection = {
       imageAlt: "AWS Logo",
       footerLink: [
         {name: "Certification", url: "https://www.credly.com/badges/6e037d2b-a85d-46d9-a50f-01a9705d2472/public_url"}
+      ]
+    },
+    {
+      title: "GCP Associate Cloud Engineer",
+      subtitle: "Completed Certifcation from GCP for Associate Cloud Engineer",
+      image: require("./assets/images/GCP_Logo.png"),
+      imageAlt: "GCP Logo",
+      footerLink: [
+        {name: "Certification", url: "https://www.credly.com/badges/9131b7a1-e126-4efd-8db2-5a821cfedb57/public_url"}
       ]
     }
   ],
